@@ -1,6 +1,8 @@
 # TypesSplitterPlugin [![Coverage Status](https://coveralls.io/repos/github/nicored/types_splitter_plugin/badge.svg?branch=main)](https://coveralls.io/github/nicored/types_splitter_plugin?branch=main) [![Go Report Card](https://goreportcard.com/badge/github.com/nicored/types_splitter_plugin)](https://goreportcard.com/report/github.com/nicored/types_splitter_plugin) [![Go Reference](https://pkg.go.dev/badge/github.com/nicored/types_splitter_plugin.svg)](https://pkg.go.dev/github.com/nicored/types_splitter_plugin)
 
-This plugin is used to split the generated types into multiple files.
+This plugin splits the generated resolvers from [gqlgen](https://github.com/99designs/gqlgen) into multiple files.
+
+When working with big projects, the generated resolvers file can become quite big and hard to navigate. This plugin allows you to split the generated resolvers into multiple files based on your configuration.
 
 ## Usage
 
