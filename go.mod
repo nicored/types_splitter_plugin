@@ -1,4 +1,4 @@
-module github.com/nicored/TypesSplitterPlugin
+module github.com/nicored/types_splitter_plugin
 
 go 1.20
 

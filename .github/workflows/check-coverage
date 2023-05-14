@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set -euo pipefail
+GO111MODULE=off go get github.com/mattn/goveralls
+
+go test -covermode atomic -coverprofile=/tmp/coverage.out.tmp -coverpkg=./... $(go list github.com/nicored/types_splitter_plugin/... | grep -v test_data)
+# ignore protobuf files
+cat /tmp/coverage.out.tmp | grep -v ".pb.go" > /tmp/coverage.out
+
+goveralls -coverprofile=/tmp/coverage.out -service=github -ignore='test_data/*'
