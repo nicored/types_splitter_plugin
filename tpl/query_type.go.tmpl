@@ -1,0 +1,5 @@
+type {{ .Type }} {
+{{ with .Fields }}{{ range . }}{{ .Content }}{{ end }}
+
+{{ end }}
+}

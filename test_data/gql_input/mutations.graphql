@@ -1,0 +1,25 @@
+type Mutation {
+    """
+    Create a new user
+    with the specified name,
+
+    email,
+    and age"""
+    createUser(
+        name: String!,
+        email: String!,
+        age: Int
+    ): User!
+
+    """Create a new editor with the specified name, email, age, and bio"""
+    createEditor(name: String!, email: String!, age: Int, bio: String!): Editor!
+
+    """Create a new post with the specified title, content, and editor ID"""
+    createPost(title: String!, content: String!, editorId: ID!): Post!
+
+    """Update a post with the specified ID and fields"""
+    updatePost(id: ID!, title: String, content: String): Post
+
+    """Delete a post with the specified ID"""
+    deletePost(id: ID!): ID
+}

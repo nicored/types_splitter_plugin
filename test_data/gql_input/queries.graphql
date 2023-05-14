@@ -1,0 +1,40 @@
+type Query {
+    """Get a user by ID"""
+    getUser(id: ID!): User @auth
+
+    """Get a post by ID"""
+    getPost(id: ID!): Post
+    @auth
+
+    """
+    Fetches an object given its ID.
+    """
+    node(
+        """
+        ID of the object.
+        """
+        id: ID!
+    ): Node @auth
+
+    """
+    Lookup nodes by a list of IDs.
+    """
+    nodes(
+        """
+        The list of node IDs.
+        """
+        ids: [ID!]!
+    ): [Node]!
+
+    """Get posts written by an editor, with optional pagination parameters"""
+    getPostsByEditor(
+        editorId: ID!,
+        first: Int,
+        after: String,
+        last: Int,
+        before: String
+    ): PostConnection!
+    @auth
+    @cacheControl(maxAge: 10, scope: PRIVATE)
+}
+

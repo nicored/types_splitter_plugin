@@ -1,0 +1,10 @@
+extend type Mutation {
+    """Create a new post with the specified title, content, and editor ID"""
+    createPost(title: String!, content: String!, editorId: ID!): Post!
+
+    """Update a post with the specified ID and fields"""
+    updatePost(id: ID!, title: String, content: String): Post
+
+    """Delete a post with the specified ID"""
+    deletePost(id: ID!): ID
+}

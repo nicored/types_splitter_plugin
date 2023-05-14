@@ -1,0 +1,12 @@
+"""
+auth directive for field and object
+"""
+directive @auth on OBJECT | FIELD_DEFINITION | QUERY | MUTATION
+
+"""
+cacheControl directive for field, object and interface
+"""
+directive @cacheControl(
+    maxAge: Int
+    scope: CacheControlScope
+) on FIELD_DEFINITION | OBJECT | INTERFACE

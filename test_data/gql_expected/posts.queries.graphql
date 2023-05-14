@@ -1,0 +1,16 @@
+extend type Query {
+    """Get a post by ID"""
+    getPost(id: ID!): Post
+    @auth
+
+    """Get posts written by an editor, with optional pagination parameters"""
+    getPostsByEditor(
+        editorId: ID!,
+        first: Int,
+        after: String,
+        last: Int,
+        before: String
+    ): PostConnection!
+    @auth
+    @cacheControl(maxAge: 10, scope: PRIVATE)
+}

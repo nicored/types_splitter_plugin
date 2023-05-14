@@ -1,0 +1,17 @@
+type Manager {
+    """The ID of the manager"""
+    id: ID!
+
+    """The name of the manager"""
+    name: String!
+
+    """The email address of the manager
+    This is the email address of the manager"""
+    email: String!
+
+    """The age of the manager"""
+    age: Int
+
+    """The subordinates of the manager"""
+    subordinates: [User]
+}

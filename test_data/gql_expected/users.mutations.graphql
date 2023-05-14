@@ -1,0 +1,13 @@
+type Mutation {
+    """
+    Create a new user
+    with the specified name,
+
+    email,
+    and age"""
+    createUser(
+        name: String!,
+        email: String!,
+        age: Int
+    ): User!
+}

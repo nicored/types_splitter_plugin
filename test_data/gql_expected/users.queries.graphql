@@ -1,0 +1,4 @@
+extend type Query {
+    """Get a user by ID"""
+    getUser(id: ID!): User @auth
+}

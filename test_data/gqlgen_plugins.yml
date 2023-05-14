@@ -1,0 +1,24 @@
+types_splitter:
+  types:
+    -
+      name: Posts
+      prefix: posts
+    -
+      name: Manager
+      prefix: managers.users
+    -
+      name: User
+      prefix: users
+  queries:
+    -
+      prefix: posts
+      matches:
+        - post
+    -
+      prefix: users
+      matches:
+        - user|manager
+    -
+      prefix: editors
+      matches:
+        - editor

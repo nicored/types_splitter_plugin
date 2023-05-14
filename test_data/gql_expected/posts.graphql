@@ -1,0 +1,43 @@
+type Post {
+    """The ID of the post"""
+    id: ID!
+
+    """The title of the post"""
+    title: String!
+
+    """The content of the post"""
+    content: String!
+
+    """The editor of the post"""
+    editor: Editor!
+}
+
+type PageInfo {
+    """Whether there is a next page or not"""
+    hasNextPage: Boolean!
+
+    """Whether there is a previous page or not"""
+    hasPreviousPage: Boolean!
+
+    """The cursor for the first item on the current page"""
+    startCursor: String
+
+    """The cursor for the last item on the current page"""
+    endCursor: String
+}
+
+type PostEdge {
+    """The cursor for the current post"""
+    cursor: String!
+
+    """The post itself"""
+    node: Post!
+}
+
+type PostConnection {
+    """The edges for the current page"""
+    edges: [PostEdge]!
+
+    """The pagination information for the current page"""
+    pageInfo: PageInfo!
+}

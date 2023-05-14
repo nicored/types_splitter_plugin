@@ -1,0 +1,67 @@
+type User {
+    """The ID of the user"""
+    id: ID!
+
+    """The name of the user"""
+    name: String!
+
+    """The email address of the user
+    This is the email address of the user
+    """
+    email: String!
+
+    """The age of the user"""
+    age: Int
+
+    """The managers of the user"""
+    managers: [Manager]
+}
+
+type Editor {
+    """The ID of the editor"""
+    id: ID!
+
+    """The user that is the editor"""
+    user: User!
+
+    """The name of the editor"""
+    name: String!
+
+    """The email address of the editor
+    which has an @ symbol in it
+    and a domain name of example.com"""
+    email: String! # This is a comment
+
+
+
+    """
+    The age of the editor
+    """
+    age: Int
+
+    """
+    The biography of the editor
+    """
+    bio: String!
+
+
+
+}
+
+type Manager {
+    """The ID of the manager"""
+    id: ID!
+
+    """The name of the manager"""
+    name: String!
+
+    """The email address of the manager
+    This is the email address of the manager"""
+    email: String!
+
+    """The age of the manager"""
+    age: Int
+
+    """The subordinates of the manager"""
+    subordinates: [User]
+}

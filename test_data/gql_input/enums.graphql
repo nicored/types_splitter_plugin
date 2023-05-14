@@ -1,0 +1,14 @@
+"""
+scope for cache control
+"""
+enum CacheControlScope {
+    """
+    Private scope for cache control
+    """
+    PRIVATE
+
+    """
+    Public scope for cache control
+    """
+    PUBLIC
+}

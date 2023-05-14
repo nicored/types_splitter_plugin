@@ -1,0 +1,41 @@
+"""
+An object with an ID
+"""
+interface Node {
+    """
+    ID of the object.
+    """
+    id: ID!
+}
+
+# Linting bug fixed in https://github.com/cjoudrey/graphql-schema-linter/pull/140
+# lint-disable relay-connection-racing_helpers-spec
+"""
+A connection with a PageInfo
+"""
+interface Connection {
+    """
+    Edges of the connection.
+    """
+    edges: [Edge]
+
+    """
+    Nodes of the edges for query shorthand access
+    """
+    nodes: [Node]
+
+    """
+    PageInfo of the connection
+    """
+    pageInfo: PageInfo!
+}
+
+"""
+An edge with a cursor
+"""
+interface Edge {
+    """
+    Node of the edge
+    """
+    node: Node
+}
