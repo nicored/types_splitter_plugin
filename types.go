@@ -231,10 +231,9 @@ func shiftOffset(pos Positioner, offset, lines int) {
 func extractFieldDefContent(def *ast.FieldDefinition) (extracted string, actualStart, actualEnd int, abvLinesFound int) {
 	input := def.Position.Src.Input
 	start := def.Position.Start
-	end := def.Position.End
 
 	linesAbove, offsetBefore := findCommentStart(input, start)
-	end = findCommentEnd(input, offsetBefore) + 1
+	end := findCommentEnd(input, offsetBefore) + 1
 
 	_, found := findNextOpenBracket('(', input, end, false)
 	if found {
