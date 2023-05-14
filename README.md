@@ -108,6 +108,12 @@ If a query type (Query, Mutation, Subscription) is emptied after the split, it w
 
 I made this plugin for my own use, so you may experience issues with it depending on your use case:
 
+**OS**
+
+It doesn't currently work on Windows:
+
+- [ ] Fix for Windows
+
 **Types**
 
 The following splits aren't supported, but could easily be added if needed:
