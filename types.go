@@ -378,24 +378,24 @@ func findNextLineOffset(input string, start int) int {
 }
 
 const (
-	OpenParen  = '('
-	CloseParen = ')'
+	openParen  = '('
+	closeParen = ')'
 
-	OpenBrace  = '{'
-	CloseBrace = '}'
+	openBrace  = '{'
+	closeBrace = '}'
 
-	OpenSqBracket  = '['
-	CloseSqBracket = ']'
+	openSqBracket  = '['
+	closeSqBracket = ']'
 )
 
 func closingBracket(bracket rune) rune {
 	switch bracket {
-	case OpenParen:
-		return CloseParen
-	case OpenBrace:
-		return CloseBrace
-	case OpenSqBracket:
-		return CloseSqBracket
+	case openParen:
+		return closeParen
+	case openBrace:
+		return closeBrace
+	case openSqBracket:
+		return closeSqBracket
 	}
 	return 0
 }
